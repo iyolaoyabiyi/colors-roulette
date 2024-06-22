@@ -1,4 +1,3 @@
-```markdown
 # Color Roulette
 
 Color Roulette is a web application that generates random colors at a specified interval. Users can start, stop, and reset the color generation process, as well as set a custom delay for the color generation.
@@ -60,5 +59,3 @@ This file contains the styles for the Color Roulette application. It defines the
 ### `script.js`
 
 This file contains the JavaScript code that powers the Color Roulette application. It includes functions for generating random colors, handling button clicks, updating the UI, and setting the delay.
-
-```
