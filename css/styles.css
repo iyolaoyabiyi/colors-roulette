@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --pri-col: #001010;
+  --sec-col: #eeffff;
+  --pri-tint: #00ffff;
+  --sec-tint: #005f5f;
+  font-size: 10px;
+}
+body {
+  position: relative;
+  font-family: Lato;
+  color: var(--sec-col);
+  background: var(--pri-col);
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+  min-height: 100vh;
+  padding: 10rem 3rem 3rem;
+  font-size: 2rem;
+}
+h1, h2, h3, button {
+  font-family: Montserrat;
+}
+ul {
+  list-style-type: none;
+}
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+section {
+  width: 100%;
+  background-color: #eff2;
+  padding: 4rem;
+  border-radius: 3rem;
+  gap: 3rem;
+  max-width: 45vw;
+}
+.color-sect {
+  position: fixed;
+  right: 3rem;
+  top: 10rem;
+}
+section div {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+#display-portal {
+  background: var(--pri-tint);
+  border-radius: inherit;
+  height: 30vh;
+}
+#stats p:first-of-type {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+#colorHex {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--pri-tint);
+}
+#colors-container {
+  display: none;
+}
+#all-colors li{
+  cursor: pointer;
+  padding: 0.5rem 0 0;
+  width: fit-content;
+}
+#stats p span {
+  font-weight: bold;
+}
+.btns {
+  flex-wrap: wrap;
+}
+button {
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--pri-tint);
+  color: var(--pri-col);
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+}
+button:hover {
+  background: var(--pri-col);
+  color: var(--pri-tint);
+}
+#inp-container {
+  /* align-items: flex-start; */
+  display: none;
+  max-width: 50%;
+}
+#time-input {
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: Lato;
+  border-radius: 1rem;
+}
+#time-input:focus {
+  outline: none;
+  border: 5px solid #0ff;
+}
+@media screen and (max-width: 750px) {
+  body.flex-row {
+    flex-flow: column-reverse nowrap;
+    padding: 5rem;
+  }
+  section {
+    max-width: 100%;
+  }
+  .color-sect {
+    position: static;
+  }
+}
