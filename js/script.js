@@ -1,6 +1,6 @@
 // Buttons
 const allBtns = document.querySelector(".btns");
-const delayBtn = allBtns.querySelector('#delay-btn');
+const delayBtn = allBtns.querySelectorAll('button')[3];
 // Time Input
 const inputContainer = document.getElementById('inp-container');
 const timeInp = document.getElementById('time-input');
