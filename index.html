@@ -37,12 +37,37 @@
     <section class="color-sect flex-col">
       <div id="stats">
         <p><span>Idle</span></p>
+        <br>
         <p>Delay: <span>1000</span>ms</p>
         <p><span>0</span> colors generated.</p>
       </div>
-      <div id="display-portal"></div>
-      <div>
-        <p>Color Hex: <span id="colorHex">#00FFFF</span></p>
+      <div id="display-portal" class="flex-col">
+        <div id="colorDetails" class="color-info">
+          <p>Color Name: <span>Aqua</span></p>
+          <p>Color Hex: <span>#00FFFF</span></p>
+          <p>Color RGB: <span>rgb(0, 255, 255)</span></p>
+          <p>Color RGB: <span>hsl(180, 100%, 50%)</span></p>
+        </div>
+        <button>More Info</button>
+      </div>
+    </section>
+    <section id="color-info" class="color-info flex-col hidden">
+      <p id="close-info">X</p>
+      <div id="base-color" class="flex-col">
+        <div id="base-color-box" class="color-box"></div>
+        <h2>Base Color </h2>
+        <p>Color Name: <span>Aqua</span></p>
+        <p>Color Hex: <span>#00FFFF</span></p>
+        <p>Color RGB: <span>rgb(0, 255, 255)</span></p>
+        <p>Color RGB: <span>hsl(180, 100%, 50%)</span></p>
+      </div>
+      <div id="comp-color" class="flex-col">
+        <h2>Complementary Color </h2>
+        <div id="comp-color-box" class="color-box"></div>
+        <p>Color Name: <span>Red</span></p>
+        <p>Color Hex: <span>#FF0000</span></p>
+        <p>Color RGB: <span>rgb(255, 0, 0)</span></p>
+        <p>Color RGB: <span>hsl(0, 100%, 50%)</span></p>
       </div>
     </section>
   <script src="./js/script.js"></script>

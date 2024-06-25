@@ -44,6 +44,43 @@ section {
   gap: 3rem;
   max-width: 45vw;
 }
+#color-info {
+  font-size: 1.4rem;
+  position: fixed;
+  background: var(--sec-col);
+  color: var(--pri-col);
+  z-index: 1;
+  inset: 0;
+  margin: 5rem auto;
+  height: fit-content;
+  width: 400px;
+  gap: 3rem;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+#color-info div {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#comp-color-box {
+  background: #ff0000;
+}
+.color-box {
+  width: clamp(50px, 50px, 100px);
+  height: clamp(50px, 50px, 100px);
+  background: var(--pri-tint);
+}
+#close-info {
+  position: fixed;
+  font-weight: bold;
+  background: var(--sec-tint);
+  color: var(--sec-col);
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+}
 .color-sect {
   position: fixed;
   right: 3rem;
@@ -57,17 +94,30 @@ section div {
 #display-portal {
   background: var(--pri-tint);
   border-radius: inherit;
-  height: 30vh;
+  min-height: 30vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 3rem;
+}
+#display-portal button {
+  background: var(--pri-col);
+  color: var(--pri-tint);
+}
+#display-portal button:hover {
+  background: #001010dd;
+}
+.color-info p {
+  color: var(--pri-col);
+}
+.color-info p span{
+  font-size: 1.1em;
+  font-weight: bold;
 }
 #stats p:first-of-type {
   text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
-}
-#colorHex {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: var(--pri-tint);
 }
 #colors-container {
   display: none;
@@ -113,13 +163,20 @@ button:hover {
   outline: none;
   border: 5px solid #0ff;
 }
+.hidden {
+  display: none;
+}
 @media screen and (max-width: 750px) {
   body.flex-row {
     flex-flow: column-reverse nowrap;
-    padding: 5rem;
+    padding: 3rem;
   }
   section {
     max-width: 100%;
+    padding: 2rem;
+  }
+  #color-info {
+    max-width: 95vw;
   }
   .color-sect {
     position: static;

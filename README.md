@@ -1,61 +1,63 @@
 # Color Roulette
 
-Color Roulette is a web application that generates random colors at a specified interval. Users can start, stop, and reset the color generation process, as well as set a custom delay for the color generation.
+**Color Roulette** is a dynamic web application designed to generate and display random colors. This interactive tool allows users to explore different colors and their complementary counterparts, with features to control the color generation process.
 
-## Table of Contents
+## Key Features
 
-- [Demo](#demo)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Files](#files)
+1. **Random Color Generation**: 
+    - **Start**: Begin generating random colors with the "start" button.
+    - **Stop**: Halt the generation process using the "stop" button.
+    - **Reset**: Reset the application to its initial state with the "reset" button.
 
-## Demo
+2. **Customizable Generation Delay**:
+    - Users can set the delay interval for color generation between 100 and 5000 milliseconds using the "set delay" button and corresponding input field.
 
-To see a live demo of the Color Roulette application, open the `index.html` file in a web browser.
+3. **Color Details Display**:
+    - **Color Information**: Detailed information about the generated color, including its name, hexadecimal code, RGB, and HSL values.
+    - **Complementary Color**: Displays the complementary color alongside its detailed information.
 
-## Features
+4. **Interactive Color List**:
+    - **Generated Colors List**: Displays a list of all generated colors.
+    - **Click to Change Background**: Users can click on any color in the list to set it as the background color of the display area.
+    - **Hover Effects**: Color items in the list change appearance on hover.
 
-- Start, stop, and reset the color generation process.
-- Set a custom delay for the color generation (between 100 and 5000 milliseconds).
-- Display the hex code of the current color.
-- Display a list of generated colors.
-- Click on any color in the list to change the background to that color.
+5. **Real-time Stats**:
+    - **Status**: Indicates whether the application is idle, generating colors, or stopped.
+    - **Delay**: Displays the current delay interval for color generation.
+    - **Total Colors Generated**: Shows the number of colors generated in the current session.
 
-## Installation
+6. **Enhanced User Interface**:
+    - **Dynamic Display**: The main display area changes color based on the current generated color.
+    - **Color Information Button**: A button to reveal more detailed color information, which can be closed by clicking outside the information box.
 
-1. Clone the repository or download the ZIP file.
-2. Ensure you have a compatible web browser (e.g., Chrome, Firefox).
-3. Open the `index.html` file in your web browser.
+## How to Use
 
-## Usage
+1. **Start Generating Colors**:
+    - Click the "start" button to begin the color generation process. Colors will be generated at the set delay interval and displayed in the list.
 
-1. **Start Generation**: Click the "start" button to begin generating colors.
-2. **Stop Generation**: Click the "stop" button to stop generating colors.
-3. **Reset**: Click the "reset" button to reset the application.
-4. **Set Delay**:
-   - Click the "set delay" button.
-   - Enter a delay time (in milliseconds) in the input box.
-   - Click the "set delay" button again to confirm the delay.
+2. **Stop or Reset**:
+    - Use the "stop" button to pause the generation.
+    - The "reset" button will clear the generated colors and reset the delay interval to the default value of 1000 milliseconds.
 
-Click on any color in the generated list to change the background to that color.
+3. **Set Custom Delay**:
+    - Click "set delay" to open the input field for entering a custom delay interval.
+    - Enter a value between 100 and 5000 milliseconds and click the adjacent button to apply the new delay.
 
-## Files
+4. **View and Interact with Colors**:
+    - The generated colors appear in a list. Click on any color to change the background of the display area to that color.
+    - Hover over the color items to see a subtle change in their appearance.
 
-- `index.html`: The main HTML file that structures the application.
-- `styles.css`: The CSS file that styles the application.
-- `script.js`: The JavaScript file that contains the logic for the color generation and user interactions.
+5. **Detailed Color Information**:
+    - Click the "More Info" button to view detailed information about the current color and its complementary color.
+    - Close the information display by clicking the "X" or clicking outside the information box.
 
-## File Descriptions
+## Technologies Used
 
-### `index.html`
+- **HTML**: For structuring the content of the web application.
+- **CSS**: For styling the user interface.
+- **JavaScript**: For adding interactive features and handling the color generation logic.
 
-This file contains the HTML structure of the Color Roulette application. It includes sections for displaying the title, control buttons, input for setting the delay, and the generated colors list.
+## Acknowledgements
 
-### `styles.css`
-
-This file contains the styles for the Color Roulette application. It defines the layout, colors, fonts, and responsiveness of the application.
-
-### `script.js`
-
-This file contains the JavaScript code that powers the Color Roulette application. It includes functions for generating random colors, handling button clicks, updating the UI, and setting the delay.
+- **Color API**: This application uses the [Serialif Color API](https://color.serialif.com/) to fetch detailed color information and their complementary colors.
+- **Author**: Developed by Iyola Oyabiyi.
