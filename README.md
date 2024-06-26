@@ -59,5 +59,4 @@
 
 ## Acknowledgements
 
-- **Color API**: This application uses the [Serialif Color API](https://color.serialif.com/) to fetch detailed color information and their complementary colors.
 - **Author**: Developed by Iyola Oyabiyi.
