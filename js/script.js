@@ -1,3 +1,4 @@
+import colorValues from "./colorValues.js";
 // Buttons
 const allBtns = document.querySelector(".btns");
 const delayBtn = allBtns.querySelectorAll('button')[3];
@@ -65,30 +66,29 @@ const getRandomHex = () => {
   }
   return hex;
 }
-// Color convertion and information api
-const fetchColorApi = async hex => {
+
+const fetchColorValues = hex => {
   try {
-    const response = await fetch(`https://color.serialif.com/hex=${hex}`);
-    const data = await response.json();
-    return [data.base, data.complementary];
+    const colorObj = colorValues(hex);
+    return [colorObj.base, colorObj.complementary];
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 }
 // Change colors in ui
-const changeElementColors = async hex => {
+const changeElementColors = hex => {
   try {
     const colorHex = `#${hex}`;
-    const [colorObj, compColorObj] = await fetchColorApi(hex);
+    const [colorObj, compColorObj] = fetchColorValues(hex)
     // Update currentColor
-    currentColor.baseName = colorObj.keyword;
-    currentColor.baseHex = colorHex;
-    currentColor.baseRgb = colorObj.rgb.value;
-    currentColor.baseHsl = colorObj.hsl.value;
-    currentColor.compName = colorObj.keyword;
-    currentColor.compHex = compColorObj.hex.value;
-    currentColor.compRgb = colorObj.rgb.value;
-    currentColor.compHsl = colorObj.hsl.value;
+    currentColor.baseName = colorObj.name;
+    currentColor.baseHex = colorObj.hex;
+    currentColor.baseRgb = colorObj.rgb
+    currentColor.baseHsl = colorObj.hsl;
+    currentColor.compName = compColorObj.name;
+    currentColor.compHex = compColorObj.hex;
+    currentColor.compRgb = compColorObj.rgb;
+    currentColor.compHsl = compColorObj.hsl;
     // Change Elements Color
     displayPort.style.background = currentColor.baseHex;
     colorDetailsP.forEach(p => {
@@ -97,7 +97,7 @@ const changeElementColors = async hex => {
     colorInfoBtn.style.background = currentColor.compHex;
     colorInfoBtn.style.color = currentColor.baseHex;
     // Change Elements Text
-    colorNameElem.innerText = currentColor.baseName ? currentColor.baseName : `Unknown`;
+    colorNameElem.innerText = currentColor.baseName;
     colorHexElem.innerText = currentColor.baseHex;
     colorRgbElem.innerText = currentColor.baseRgb;
     colorHslElem.innerText = currentColor.baseHsl;
@@ -109,7 +109,7 @@ const changeElementColors = async hex => {
 const changeColor = async () => {
   const hex = getRandomHex();
   const colorHex = `#${hex}`;
-  await changeElementColors(hex);
+  changeElementColors(hex);
 
   colorsContainer.style.display = "flex";
   colorsListElement.innerHTML += `<li>${colorHex}</li>`;
